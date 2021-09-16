@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{%block title%}Question 3!{%endblock%}
+
+
+{%block question%}
+{%for msg in get_flashed_messages()%}
+<h1>{{msg}}</h1>
+{%endfor%}
+<h2>{{quiz.questions[3].question}}</h2>
+{%endblock%}
+{%block answer %}
+<form action="/answer" method="POST">
+    <input type="radio" name="choices" value="Yes" id="Yes">
+    <label for="Yes"> Yes </label><br>
+    <input type="radio" name="choices" value="No" id="No">
+    <label for="No"> No </label><br>
+    <button>Submit</button>
+</form>
+{%endblock%}
+{{quest_replied}}
