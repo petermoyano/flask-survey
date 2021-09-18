@@ -17,5 +17,8 @@
     <label for="No"> No </label><br>
     <button>Submit</button>
 </form>
+{%for r in session["responses"]%}
+    <li>{{r}}</li>
+{%endfor%}
 {%endblock%}
 {{quest_replied}}

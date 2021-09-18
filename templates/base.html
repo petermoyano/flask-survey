@@ -9,17 +9,18 @@
 </head>
 
 <body>
+    <h1>This header is in all pages</h1>
+    <p>{{session["responses"]}}</p>
     {%block question %}
     <h1>Welcome to the survey!</h1>
     <h2>{{quiz.title}}</h2>
     <h3>{{quiz.instructions}}</h3>
-    <form action="/questions/0">
+    <form action="/questions/0" method="POST">
     <button>Start Survey</button>
     </form>
     {%endblock%}
     {%block answer %}
     {%endblock%}
-    {{quest_replied}}
 </body>
 
 </html>

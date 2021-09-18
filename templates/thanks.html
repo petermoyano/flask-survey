@@ -1,6 +1,11 @@
 <h1>Thank you!</h1>
+<h2>Cookies from request.cookies are: {{ckies}}</h2>
 <ul>
-{%for r in res%}
-    <li>{{r}}</li>
-{%endfor%}
+</ul>
+
+<h2>The current session object looks like this: {{session}}</h2>
+<ul>
+{%for c in session["responses"]%}
+    <li>{{c}}</li>
+{%endfor%}    
 </ul>
